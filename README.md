@@ -74,7 +74,7 @@
 - The "Salinas" HSI includes ***7 endmembers***
 - Each one corresponds to a certain material, or cultivation in our case
 - The cultivations are *grapes, broccoli, fallow 1, fallow 2, fallow3, stubble, celery*
-- The aim is to perform unmixing on each one of the pixels in the image with **non-zero label**, wrt the endmembers
+- The aim is to perform unmixing on each of the pixels in the image with **non-zero label**, wrt the 7 endmembers
 - For this task, the following five different spectral unmixing methods will be used:
   - *Least squares*
   - *Least squares imposing the sum-to-one constraint*

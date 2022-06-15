@@ -48,7 +48,7 @@
 #### Spectral Unmixing
 
 - Assume that a set of $m$ spectral signatures corresponding to the pure pixels in the HSI under study is given
-- Given a specific pixel, the aim is to determine the percentage to which each pure material contributes in its formation
+- For a given pixel, the aim is to determine the percentage to which each material contributes in its formation
 - These percentages are known as the ***abundance maps*** for the given pixel
 - Therefore it is clear that spectral unmixing provides ***sub-pixel information*** for a given pixel
 
@@ -74,7 +74,7 @@
 - The "Salinas" HSI includes ***7 endmembers***
 - Each one corresponds to a certain material, or cultivation in our case
 - The cultivations are *grapes, broccoli, fallow 1, fallow 2, fallow3, stubble, celery*
-- The aim is to perform **unmixing** on **each one** of the pixels in the image with **non-zero label**, wrt the 7 endmembers
+- The aim is to perform unmixing on each one of the pixels in the image with **non-zero label**, wrt the 7 endmembers
 - For this task, the following five different spectral unmixing methods will be used:
   - *Least squares*
   - *Least squares imposing the sum-to-one constraint*
@@ -106,7 +106,7 @@ This strange behavior, though, might have an explanation. LS methods with inequa
 ## *Part 2 - Classification*
 
 - In this case, we consider also the image pixels with **non-zero class labels**
-- The task is to assign each one of them to the most appropriate class, among the ***7 known classes (endmembers)***
+- The task is to assign each one of them to the most appropriate class, among the ***7 known classes***
 - To this end, four classifiers will be used:
   - *The Naive Bayes classifier*
   - *The Minimum Euclidean Distance classifier*
@@ -124,14 +124,14 @@ This strange behavior, though, might have an explanation. LS methods with inequa
 
 ### Comments
 
-- Comparing the results obtained by all classifiers, we see that there are great differences between their respective errors
+- Comparing the results, we see that there are great differences between their respective errors
 - However, if we compare their success rates, we see that their performance is almost at the same level
 - Therefore, if we take into account both their errors and their success rates, we see that we have a clear winner
-- KNN classifier not only has the best overall success rate, but also the lowest error by a wide margin from the second ranked classifier
+- KNN classifier not only has the best overall success rate, but also the lowest error
 - On the other hand, the worst performing classifier seems to be the Minimum Euclidean Distance classifier
 - It is clear from the graph above that it ranks last in terms of error and success rate
 - The same conclusion can, also, be drawn if we look at its confusion matrix in the [notebook](https://github.com/sapaladas/hyperspectral_images_processing/hyperspectral_images_processing.ipynb)
-- We observe that it has more non-diagonal values than the other classifiers, which means that it has more misclassified data
+- It has more non-diagonal values than the other classifiers, which means that it has more misclassified data
 
 ## *Conclusion*
 
